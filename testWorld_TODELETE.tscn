@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bg4eyh6f6jetp"]
+
+[ext_resource type="PackedScene" uid="uid://cfwi27wcbs166" path="res://src/ingame_objects/player/Player.tscn" id="1_tc80q"]
+[ext_resource type="PackedScene" uid="uid://cs4bhafef23kn" path="res://src/ingame_objects/hud/hud.tscn" id="2_10hyl"]
+[ext_resource type="PackedScene" uid="uid://cvdxuhinum6t4" path="res://src/ingame_objects/enemy/testEnemy.tscn" id="3_tmvpb"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_10hyl"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tc80q"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="floor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0)
+mesh = SubResource("PlaneMesh_10hyl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_tc80q")
+
+[node name="Player" parent="." instance=ExtResource("1_tc80q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.830841, 0.626828, -0.511535)
+
+[node name="HUD" parent="." instance=ExtResource("2_10hyl")]
+
+[node name="TestEnemy" parent="." instance=ExtResource("3_tmvpb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.07485, 0.999999, 12.9548)

@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wild Crusade", "Wild Crusade.csproj", "{EEA17084-2DB3-41B7-A61D-824053F6CCE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEA17084-2DB3-41B7-A61D-824053F6CCE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA17084-2DB3-41B7-A61D-824053F6CCE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA17084-2DB3-41B7-A61D-824053F6CCE0}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{EEA17084-2DB3-41B7-A61D-824053F6CCE0}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{EEA17084-2DB3-41B7-A61D-824053F6CCE0}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{EEA17084-2DB3-41B7-A61D-824053F6CCE0}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

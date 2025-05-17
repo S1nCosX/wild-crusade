@@ -1,0 +1,111 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs4bhafef23kn"]
+
+[ext_resource type="Script" uid="uid://daogdtj7n4fbj" path="res://src/ingame_objects/hud/Hud.cs" id="1_6ca3a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fefj0"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.564962, 0.564962, 0.564962, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ca3a"]
+bg_color = Color(0, 1, 0.466667, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.151276, 0.151276, 0.151276, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_6ca3a")
+
+[node name="Signals" type="RichTextLabel" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+metadata/_edit_use_anchors_ = true
+
+[node name="HealthBar" type="HBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -98.0
+offset_right = 353.0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Bar_name" type="MarginContainer" parent="HealthBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Hp_label" type="Label" parent="HealthBar/Bar_name"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 64
+text = "HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bar" type="MarginContainer" parent="HealthBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="HealtBar" type="ProgressBar" parent="HealthBar/Bar"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_fefj0")
+theme_override_styles/fill = SubResource("StyleBoxFlat_6ca3a")
+value = 100.0
+show_percentage = false
+
+[node name="HealthInNums" type="VBoxContainer" parent="HealthBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Current" type="Label" parent="HealthBar/HealthInNums"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="HealthBar/HealthInNums"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Max" type="Label" parent="HealthBar/HealthInNums"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1

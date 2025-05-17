@@ -1,0 +1,12 @@
+{
+    "0": {
+        "ReloadTimeMod": 0,
+        "FireRate": 0,
+        "BulletSpeedMod": 100,
+        "BLTMod": 100,
+        "MagCapMod": 0,
+        "AmmoCapMod": 10,
+        "FirePattern": null,
+        "DamageMod": 10
+    }
+}
